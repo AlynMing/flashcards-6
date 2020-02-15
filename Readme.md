@@ -8,7 +8,7 @@
 Simple flashcards app that asks a question and reveals answer when correct option is tapped. If incorrect option is tapped, the option is eliminated. To reset app after figuring out answer, tap the flashcard.
 
 ### App Walk-though
-![](lab_1_optional.gif) 
+![](lab_1_final.gif) 
 
 ## Required
 - [x] Create New Project in Xcode
