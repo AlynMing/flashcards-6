@@ -26,6 +26,8 @@ class ViewController: UIViewController {
         
         backLabel.layer.cornerRadius = 20.0
         backLabel.clipsToBounds = true
+        backLabel.layer.borderWidth = 3.0
+        backLabel.layer.borderColor = #colorLiteral(red: 1, green: 0.7360894084, blue: 0.7559660077, alpha: 1)
         
         card.layer.cornerRadius = 20.0
         card.layer.shadowRadius = 15.0
