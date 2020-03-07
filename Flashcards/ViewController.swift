@@ -45,6 +45,12 @@ class ViewController: UIViewController {
         btnOptionThree.layer.borderWidth = 3.0
         btnOptionThree.layer.borderColor = #colorLiteral(red: 1, green: 0.7360894084, blue: 0.7559660077, alpha: 1)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigationController = segue.destination as! UINavigationController
+        let creationController = navigationController.topViewController as! CreationViewController
+        creationController.flashcardsController = self
+    }
 
     @IBAction func didTapOnFlashcard(_ sender: Any) {
         if frontLabel.isHidden {
@@ -52,6 +58,11 @@ class ViewController: UIViewController {
             btnOptionOne.isHidden = false
             btnOptionThree.isHidden = false
         }
+    }
+    
+    func updateFlashcard(question: String, answer: String) {
+        frontLabel.text = question
+        backLabel.text = answer
     }
     
     @IBAction func didTapOptionOne(_ sender: Any) {

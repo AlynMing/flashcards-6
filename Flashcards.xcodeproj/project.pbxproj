@@ -15,6 +15,7 @@
 		804959B323F760050055FCE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 804959B123F760050055FCE3 /* LaunchScreen.storyboard */; };
 		804959BE23F760050055FCE3 /* FlashcardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804959BD23F760050055FCE3 /* FlashcardsTests.swift */; };
 		804959C923F760050055FCE3 /* FlashcardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804959C823F760050055FCE3 /* FlashcardsUITests.swift */; };
+		804959D72411A9410055FCE3 /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804959D62411A9410055FCE3 /* CreationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		804959C423F760050055FCE3 /* FlashcardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashcardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		804959C823F760050055FCE3 /* FlashcardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardsUITests.swift; sourceTree = "<group>"; };
 		804959CA23F760050055FCE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		804959D62411A9410055FCE3 /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				804959A823F75FFE0055FCE3 /* SceneDelegate.swift */,
 				804959AA23F75FFE0055FCE3 /* ViewController.swift */,
 				804959AC23F75FFE0055FCE3 /* Main.storyboard */,
+				804959D62411A9410055FCE3 /* CreationViewController.swift */,
 				804959AF23F760050055FCE3 /* Assets.xcassets */,
 				804959B123F760050055FCE3 /* LaunchScreen.storyboard */,
 				804959B423F760050055FCE3 /* Info.plist */,
@@ -262,6 +265,7 @@
 				804959AB23F75FFE0055FCE3 /* ViewController.swift in Sources */,
 				804959A723F75FFE0055FCE3 /* AppDelegate.swift in Sources */,
 				804959A923F75FFE0055FCE3 /* SceneDelegate.swift in Sources */,
+				804959D72411A9410055FCE3 /* CreationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
