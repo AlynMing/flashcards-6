@@ -16,6 +16,8 @@ class CreationViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        questionTextField.text = initialQuestion
+        answerTwoTextField.text = initialAnswer
     }
     
     @IBAction func didTapOnCancel(_ sender: Any) {
@@ -23,13 +25,30 @@ class CreationViewController: UIViewController {
     }
 
     @IBOutlet weak var questionTextField: UITextField!
-    @IBOutlet weak var answerTextField: UITextField!
+    @IBOutlet weak var answerOneTextField: UITextField!
+    @IBOutlet weak var answerTwoTextField: UITextField!
+    @IBOutlet weak var answerThreeTextField: UITextField!
+    
+    
+    var initialQuestion: String?
+    var initialAnswer: String?
     
     @IBAction func didTapOnDone(_ sender: Any) {
         let questionText = questionTextField.text
-        let answerText = answerTextField.text
-        flashcardsController.updateFlashcard(question: questionText!, answer: answerText!)
-        dismiss(animated: true)
+        let answerOneText = answerOneTextField.text
+        let answerTwoText = answerTwoTextField.text
+        let answerThreeText = answerThreeTextField.text
+        
+        if questionText == nil || answerOneText == nil || answerTwoText == nil || answerThreeText == nil || questionText!.isEmpty || answerOneText!.isEmpty || answerTwoText!.isEmpty || answerThreeText!.isEmpty {
+            let alert = UIAlertController (title: "Missing text", message: "You need to enter both a question and an answer", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default)
+            
+            alert.addAction(okAction)
+            present(alert, animated: true)
+        } else {
+            flashcardsController.updateFlashcard(question: questionText!, answerOne: answerOneText!, answerTwo: answerTwoText!, answerThree: answerThreeText!)
+            dismiss(animated: true)
+        }
     }
     /*
     // MARK: - Navigation

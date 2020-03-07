@@ -77,7 +77,15 @@
                                     <color key="titleShadowColor" red="0.9972847104" green="0.74896347519999995" blue="0.76077884439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="eVm-Ur-pF4" kind="presentation" id="K39-SJ-xLH"/>
+                                    <segue destination="eVm-Ur-pF4" kind="show" id="K39-SJ-xLH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3Y-eO-peP">
+                                <rect key="frame" x="274" y="516" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="✏️"/>
+                                <connections>
+                                    <segue destination="eVm-Ur-pF4" kind="show" identifier="EditSegue" id="r0V-5M-eOk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -120,8 +128,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wOw-eS-goc">
-                                <rect key="frame" x="111" y="404" width="193" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer #1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wOw-eS-goc">
+                                <rect key="frame" x="111" y="369" width="193" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer #2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WzG-au-7Zf">
+                                <rect key="frame" x="111" y="467" width="193" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer #3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sDx-xJ-MsP">
+                                <rect key="frame" x="111" y="572" width="193" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -143,7 +163,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="answerTextField" destination="wOw-eS-goc" id="YC4-d2-wYt"/>
+                        <outlet property="answerOneTextField" destination="wOw-eS-goc" id="sph-p6-bFY"/>
+                        <outlet property="answerThreeTextField" destination="sDx-xJ-MsP" id="wM3-RV-BHS"/>
+                        <outlet property="answerTwoTextField" destination="WzG-au-7Zf" id="F96-op-Nyp"/>
                         <outlet property="questionTextField" destination="rP6-0p-OiO" id="bPL-ac-2ie"/>
                     </connections>
                 </viewController>
@@ -156,6 +178,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eVm-Ur-pF4" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="qfA-wr-Ftf"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a6E-d3-Nao">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -170,4 +193,7 @@
             <point key="canvasLocation" x="918.84057971014499" y="129.91071428571428"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="K39-SJ-xLH"/>
+    </inferredMetricsTieBreakers>
 </document>
